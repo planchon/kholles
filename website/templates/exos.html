@@ -44,7 +44,6 @@ $$</div>
 	      </li>
 	    </ul>
 	    <form class="form-inline my-2 my-lg-0">
-	        <a class="nav-link" href="#">Mon compte</a>
 	      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
 	      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Recherche</button>
 	    </form>
@@ -54,24 +53,22 @@ $$</div>
 	<div class="container">
 		<div style="margin-top:10px">
 		<h1>Tous les exercices</h1>
-		{% for chapter in exos[:1] %}
-			<h3>{{ chapter["title"] }}</h3>
-			{% for exo in chapter["exo"] %}
+			{% for exo in exos %}
 			<hr>
-			<h5>{{ exo["title"] }} - {{ exo["stars"] }} / 5</h5>
+			<h5>{{ exo[1] }} - {{ exo[2] }} / 5 - <a id="exo{{exo[0]}}" href="javascript:sendExo({{exo[0]}})">ajouter a ma liste</a></h5>
 
 			<div class="card bg-light">
 			  <div class="card-header">Enonce</div>
 			  <div class="card-body">
-			    {{ exo["enonce_html"] | safe }}
+			    {{ exo[6] | safe }}
 			  </div>
 			</div>
-			{% if exo["indication_html"] %}
+			{% if exo[7] %}
 			<div style="margin-top:5px">
 			<div class="card bg-dark text-white">
 			  <div class="card-header">Indication</div>
 			  <div class="card-body">
-			    {{ exo["indication_html"] | safe }}
+			    {{ exo[7] | safe }}
 			  </div>
 			</div>
 			{% endif %}
@@ -79,15 +76,25 @@ $$</div>
 			<div class="card bg-danger text-white">
 			  <div class="card-header">Corrige</div>
 			  <div class="card-body">
-			    {{ exo["corrige_html"] | safe }}
+			    {{ exo[8] | safe }}
 			  </div>
 			</div>
 
 
 			{% endfor %}
-		{% endfor %}
 
 	</div>
+
+	<script>
+		function sendExo(id) {
+			const req = new XMLHttpRequest();
+			req.open('POST', "/send_exo/" + id, false);
+			req.send(null);
+			console.log("here");
+			document.getElementById("exo1").value = "remove";
+		}
+
+	</script>
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

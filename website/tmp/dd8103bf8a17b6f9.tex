@@ -1,0 +1,193 @@
+% !TEX encoding = UTF-8 Unicode
+\documentclass[11pt, a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+
+\usepackage[top = 50mm, headheight=62pt]{geometry}
+\usepackage{titleps}
+\usepackage{tabularx, booktabs, multirow}
+\usepackage{graphicx, adjustbox, microtype}
+\usepackage{lipsum}
+
+\usepackage{amsmath}
+\usepackage[linesnumbered,ruled]{algorithm2e}
+\usepackage[noend]{algpseudocode}
+
+\makeatletter
+\def\BState{\State\hskip-\ALG@thistlm}
+\makeatother
+
+\usepackage{multicol}
+\usepackage{color}
+\usepackage{comment}
+
+\newcommand\doublePoint{::}
+
+\nonstopmode
+
+\usepackage[most]{tcolorbox}
+
+\newtcblisting[auto counter]{texCode}[2][]{
+     sharp corners,
+     keywordstyle=\color[rgb]{0,0,1},
+     fonttitle = \bfseries,
+     colframe = gray,
+     listing only,
+     listing options = {basicstyle = \ttfamily, language = TeX},
+     title = Code Source LaTeX - \thetcbcounter : #2, #1
+}
+
+\newtcblisting[auto counter]{bashCode}[2][]{
+     sharp corners,
+     keywordstyle=\color[rgb]{0,0,1},
+     fonttitle = \bfseries,
+     colframe = gray,
+     listing only,
+     listing options = {basicstyle = \ttfamily, language = Bash},
+     title = Code Source bash - \thetcbcounter : #2, #1
+}
+
+\newtcblisting[auto counter]{cppCode}[2][]{
+     keywordstyle=\color[rgb]{0,0,1},
+     sharp corners,
+     fonttitle = \bfseries,
+     colframe = gray,
+     listing only,
+     listing options = {basicstyle = \ttfamily, language = C++},
+     title = Code Source C++ - \thetcbcounter : #2, #1
+}
+
+\newtcblisting[auto counter]{pytCode}[2][]{
+     keywordstyle=\color[rgb]{0,0,1},
+     sharp corners,
+     fonttitle = \bfseries,
+     colframe = gray,
+     listing only,
+     listing options = {basicstyle = \ttfamily, language = Python},
+     title = Code Source Python - \thetcbcounter: #2, #1
+}
+
+\newtcblisting[auto counter]{javaCode}[2][]{
+     sharp corners,
+     keywordstyle=\color[rgb]{0,0,1},
+     fonttitle = \bfseries,
+     colframe = gray,
+     listing only,
+     listing options = {basicstyle = \ttfamily, language = Java},
+     title = Code Source Java - \thetcbcounter: #2, #1
+}
+
+\lstset{%
+     numbersep=3mm,
+		 numbers=left,
+		 numberstyle=\tiny,
+		 frame=single,
+		 framexleftmargin=6mm,
+		 xleftmargin=6mm,
+		 literate=%
+		  	{doublePoint}{::}2 %
+				{code}{CODE}4 %
+				{end}{END}3 %
+				{endl}{endl}4 %
+				{image}{IMAGE}5 %
+				{chapter}{CHAPTER}7 %
+				% {sub}{SUB_SECTION}9 %
+				% {subsub}{SUB_SUB_SECTION}14 %
+}
+
+\setlength{\columnseprule}{1pt}
+\setlength{\columnsep}{0.5cm}
+\def\columnseprulecolor{\color{black}}
+
+\makeatletter
+     \renewcommand{\thesection}{\Roman{section}.}
+     \renewcommand{\thesubsection}{\Roman{section}.\arabic{subsection}.}
+     \renewcommand{\thesubsubsection}{\Roman{section}.\arabic{subsection}.\alph{subsubsection}}
+\makeatother
+
+\makeatletter
+     \renewcommand{\section}{\@startsection{section}{1}{\z@}%
+          {-3.5ex \@plus -1ex \@minus -.2ex}%
+          {2.3ex \@plus .2ex}%
+          {\reset@font\Large\bfseries	}}
+     \renewcommand{\subsection}{\@startsection{subsection}{1}{\z@}%
+          {-3.5ex \@plus -1ex \@minus -.2ex}%
+          {2.3ex \@plus .2ex}%
+          {\reset@font\large\bfseries}}
+     \renewcommand{\subsubsection}{\@startsection{subsubsection}{1}{\z@}%
+          {-3.5ex \@plus -1ex \@minus -.2ex}%
+          {2.3ex \@plus .2ex}%
+          {\reset@font\large\bfseries}}
+\makeatother
+
+\usepackage{lastpage}
+
+\newpagestyle{style}{
+\sethead{}{%
+     \begin{tabularx}{\linewidth}[b]{@{}l>{\raggedleft\arraybackslash}X@{}}
+          \smash{\raisebox{-0.7\height}{}}& \today \\
+          & \huge \bfseries Khôlles \\
+          & kholles generator by planchon.io \\ 
+          \addlinespace
+          \midrule[0.4pt]
+     \end{tabularx}}{}
+\setfoot{}{\thepage}{}
+}
+
+\usepackage{tocstyle}
+\usepackage[nottoc, notlof, notlot]{tocbibind}
+
+\usetocstyle{standard}
+\usepackage{mathtools}
+\usepackage{amssymb}
+
+\usepackage[french]{babel}
+
+\pagestyle{style}
+
+\begin{document}
+\section{Exercices}\subsection{Vraies ou fausses}Déterminer parmi les propositions suivantes lesquelles sont vraies :
+\begin{itemize}
+\item 136 est un multiple de 17 et 2 divise 167.
+\item 136 est un multiple de 17 ou 2 divise 167.
+\item $\exists x\in \mathbb R,\ (x+1=0\ \textrm{ et }x+2=0)$.
+\item $(\exists x\in\mathbb R,\ x+1=0)\textrm{ et }(\exists x\in\mathbb R,\ x+2=0)$.
+\item $\forall x\in\mathbb R,\ (x+1\neq 0\textrm{ ou }x+2\neq 0)$.
+\item $\exists x\in\mathbb R^*,\ \forall y\in\mathbb R^*,\ \forall z\in\mathbb R^*,\ z-xy=0$;
+\item $\forall y\in\mathbb R^*,\exists x\in\mathbb R^*,\ \forall z\in\mathbb R^*,\ z-xy=0$;
+\item $\forall y\in\mathbb R^*,\forall z\in\mathbb R^*,\ \exists x\in\mathbb R^*,\ z-xy=0$;
+\item $\exists a\in\mathbb R,\ \forall \veps&gt;0,\ |a|&lt;\veps$;
+\item $\forall \veps&gt;0,\ \exists a\in\mathbb R,\ |a|&lt;\veps$.
+\end{itemize}\subsection{Limites de validité d'une proposition}Déterminer les réels $x$ pour lesquels l'assertion suivante est vraie :
+$$\forall y\in[0,1],\ x\geq y\implies x\geq 2y.$$\newpage\section{Indicators}\section{Vraies ou fausses}pas d'indication :(\section{Limites de validité d'une proposition}Séparer en 4cas : $x\geq 2$, $x\in]0,2[$ et $x= 0$ et $x&lt;0$.\newpage\section{Corriges}\section{Vraies ou fausses}\begin{itemize}
+\item Cette propositions est fausse, car 2 ne divise pas 167.
+\item Cette proposition est vraie, car 136 est un multiple de 17.
+\item Cette proposition est fausse, car $x$ devrait être simultanément égal à -1 et à -2.
+\item Cette proposition est vraie car $(\exists x\in\mathbb R,\ x+1=0)$ est vraie (il suffit de prendre $x=-1$) et de la même façon $(\exists x\in\mathbb R,\ x+2=0)$ est vraie (il suffit de prendre $x=-2$).
+\item Cette proposition est vraie, par exemple car il s'agit de la négation de la proposition 3, qui est fausse.
+\item Cette assertion est fausse. Si on considère $x$ n'importe quel réel non nul, alors le choix de $y=1$ et de $z=2x$
+fait que $z$ est différent de $xy$.
+\item Cette assertion est fausse. Prenons n'importe quel $y$ dans $\mathbb R^*$. 
+On voudrait trouver $x$ dans $\mathbb R^*$ tel que, pour tout $z$ dans $\mathbb R^*$, on ait $z=xy$. 
+Bien sûr, ce n'est pas possible, car le $x$ que l'on choisit devrait convenir à toute valeur de $z$,
+ce qui n'est pas possible car il suffit de considérer un $z$ différent de $xy$.
+\item Cette assertion est vraie, car on peut choisir $x$ une fois $y$ et $z$ fixés. On choisit alors $x=z/y$.
+\item L'assertion est vraie, il suffit de prendre $a=0$ (convient pour toute valeur de $\veps&gt;0$).
+\item Cette assertion est "évidemment" vraie car elle est plus faible que la précédente (on peut choisir
+$a$ après $\veps&gt;0$).
+\end{itemize}
+\section{Limites de validité d'une proposition}On sépare en 4 cas :
+\begin{itemize}
+\item $x\geq 2$. Alors, pour tout $y\in[0,1]$, les propositions $x\geq y$ et $x\geq 2y$ sont vraies.
+D'après la table de vérité de l'implication, l'assertion est vraie.
+\item $x&lt;0$. Alors, pour tout $y\in [0,1]$, les propositions $x\geq y$ et $x\geq 2y$ sont fausses.
+D'après la table de vérité de l'implication, l'assertion est vraie.
+\item $x\in]0,2[$. On peut alors trouver un réel $y\in[0,1]$ tel que $2y&gt;x$ et $x&lt;y$. En effet,
+$x/2\in ]0,1[$ et il suffit de choisir $x/2&lt;y&lt;\min(1,x)$. Dans ce cas, $x\geq y$ est vraie et $x\geq 2y$ est fausse.
+L'assertion est fausse.
+\item Si $x=0$, alors les assertions $x\geq y$ et $x\geq 2y$ sont ou bien simultanément fausses
+(lorsque $y\in]0,1[$, ou bien simultanément vraies. L'assertion est donc vraie.
+\end{itemize}
+\end{document}

@@ -1,0 +1,125 @@
+INSERT INTO exo VALUES (NULL, 'Vraies ou fausses", 1, "Déterminer parmi les propositions suivantes lesquelles sont vraies :
+\begin{itemize}
+\item 136 est un multiple de 17 et 2 divise 167.
+\item 136 est un multiple de 17 ou 2 divise 167.
+\item $\exists x\in \mathbb R,\ (x+1=0\ \textrm{ et }x+2=0)$.
+\item $(\exists x\in\mathbb R,\ x+1=0)\textrm{ et }(\exists x\in\mathbb R,\ x+2=0)$.
+\item $\forall x\in\mathbb R,\ (x+1\neq 0\textrm{ ou }x+2\neq 0)$.
+\item $\exists x\in\mathbb R^*,\ \forall y\in\mathbb R^*,\ \forall z\in\mathbb R^*,\ z-xy=0$;
+\item $\forall y\in\mathbb R^*,\exists x\in\mathbb R^*,\ \forall z\in\mathbb R^*,\ z-xy=0$;
+\item $\forall y\in\mathbb R^*,\forall z\in\mathbb R^*,\ \exists x\in\mathbb R^*,\ z-xy=0$;
+\item $\exists a\in\mathbb R,\ \forall \veps&gt;0,\ |a|&lt;\veps$;
+\item $\forall \veps&gt;0,\ \exists a\in\mathbb R,\ |a|&lt;\veps$.
+\end{itemize}", "", "\begin{itemize}
+\item Cette propositions est fausse, car 2 ne divise pas 167.
+\item Cette proposition est vraie, car 136 est un multiple de 17.
+\item Cette proposition est fausse, car $x$ devrait être simultanément égal à -1 et à -2.
+\item Cette proposition est vraie car $(\exists x\in\mathbb R,\ x+1=0)$ est vraie (il suffit de prendre $x=-1$) et de la même façon $(\exists x\in\mathbb R,\ x+2=0)$ est vraie (il suffit de prendre $x=-2$).
+\item Cette proposition est vraie, par exemple car il s&#039;agit de la négation de la proposition 3, qui est fausse.
+\item Cette assertion est fausse. Si on considère $x$ n&#039;importe quel réel non nul, alors le choix de $y=1$ et de $z=2x$
+fait que $z$ est différent de $xy$.
+\item Cette assertion est fausse. Prenons n&#039;importe quel $y$ dans $\mathbb R^*$. 
+On voudrait trouver $x$ dans $\mathbb R^*$ tel que, pour tout $z$ dans $\mathbb R^*$, on ait $z=xy$. 
+Bien sûr, ce n&#039;est pas possible, car le $x$ que l&#039;on choisit devrait convenir à toute valeur de $z$,
+ce qui n&#039;est pas possible car il suffit de considérer un $z$ différent de $xy$.
+\item Cette assertion est vraie, car on peut choisir $x$ une fois $y$ et $z$ fixés. On choisit alors $x=z/y$.
+\item L&#039;assertion est vraie, il suffit de prendre $a=0$ (convient pour toute valeur de $\veps&gt;0$).
+\item Cette assertion est évidemment vraie car elle est plus faible que la précédente (on peut choisir
+$a$ après $\veps&gt;0$).
+\end{itemize}
+", "<div class=enonce><a class=lienexo href=javascript:showAll(&#039;innerenonce469&#039;,&#039;imageenonce469&#039;);>Enoncé <img id=imageenonce469 src=http://www.bibmath.net/ressources/lib/bas.png/></a><div class=inner id=innerenonce469>Déterminer parmi les propositions suivantes lesquelles sont vraies :
+<ol class=enumeratechiffre>
+<li> 136 est un multiple de 17 et 2 divise 167.
+</li><li> 136 est un multiple de 17 ou 2 divise 167.
+</li><li> $\exists x\in \mathbb R,\ (x+1=0\ \textrm{ et }x+2=0)$.
+</li><li> $(\exists x\in\mathbb R,\ x+1=0)\textrm{ et }(\exists x\in\mathbb R,\ x+2=0)$.
+</li><li> $\forall x\in\mathbb R,\ (x+1\neq 0\textrm{ ou }x+2\neq 0)$.
+</li><li> $\exists x\in\mathbb R^*,\ \forall y\in\mathbb R^*,\ \forall z\in\mathbb R^*,\ z-xy=0$;
+</li><li> $\forall y\in\mathbb R^*,\exists x\in\mathbb R^*,\ \forall z\in\mathbb R^*,\ z-xy=0$;
+</li><li> $\forall y\in\mathbb R^*,\forall z\in\mathbb R^*,\ \exists x\in\mathbb R^*,\ z-xy=0$;
+</li><li> $\exists a\in\mathbb R,\ \forall \veps&gt;0,\ |a|&lt;\veps$;
+</li><li> $\forall \veps&gt;0,\ \exists a\in\mathbb R,\ |a|&lt;\veps$.
+</li></ol></div></div>", "<div class=indication><a class=lienexo href=javascript:showAll(&#039;innerindication469&#039;,&#039;imageindication469&#039;);>Indication <img id=imageindication469 src=http://www.bibmath.net/ressources/lib/droite.png/></a><div class=inner id=innerindication469 style=display:none;></div></div>", "<div class=corrige><a class=lienexo href=javascript:showAll(&#039;innercorrige469&#039;,&#039;imagecorrige469&#039;);>Corrigé <img id=imagecorrige469 src=http://www.bibmath.net/ressources/lib/droite.png/></a><div class=inner id=innercorrige469 style=display:none;><ol class=enumeratechiffre>
+<li> Cette propositions est fausse, car 2 ne divise pas 167.
+</li><li> Cette proposition est vraie, car 136 est un multiple de 17.
+</li><li> Cette proposition est fausse, car $x$ devrait être simultanément égal à -1 et à -2.
+</li><li> Cette proposition est vraie car $(\exists x\in\mathbb R,\ x+1=0)$ est vraie (il suffit de prendre $x=-1$) et de la même façon $(\exists x\in\mathbb R,\ x+2=0)$ est vraie (il suffit de prendre $x=-2$).
+</li><li> Cette proposition est vraie, par exemple car il s&#039;agit de la négation de la proposition 3, qui est fausse.
+</li><li> Cette assertion est fausse. Si on considère $x$ n&#039;importe quel réel non nul, alors le choix de $y=1$ et de $z=2x$
+fait que $z$ est différent de $xy$.
+</li><li> Cette assertion est fausse. Prenons n&#039;importe quel $y$ dans $\mathbb R^*$. 
+On voudrait trouver $x$ dans $\mathbb R^*$ tel que, pour tout $z$ dans $\mathbb R^*$, on ait $z=xy$. 
+Bien sûr, ce n&#039;est pas possible, car le $x$ que l&#039;on choisit devrait convenir à toute valeur de $z$,
+ce qui n&#039;est pas possible car il suffit de considérer un $z$ différent de $xy$.
+</li><li> Cette assertion est vraie, car on peut choisir $x$ une fois $y$ et $z$ fixés. On choisit alors $x=z/y$.
+</li><li> L&#039;assertion est vraie, il suffit de prendre $a=0$ (convient pour toute valeur de $\veps&gt;0$).
+</li><li> Cette assertion est évidemment vraie car elle est plus faible que la précédente (on peut choisir
+$a$ après $\veps&gt;0$).
+</li></ol>
+</div></div>", "ZR7IQGQNWX", "J7Y0TG2K6T", "4CYHPXEI1B", 9)
+Traceback (most recent call last):
+  File "scrapper.py", line 110, in <module>
+    scrap_exo_page(link)
+  File "scrapper.py", line 96, in scrap_exo_page
+    add_to_database(exo)
+  File "scrapper.py", line 103, in add_to_database
+    cursor.execute(query)
+sqlite3.OperationalError: unrecognized token: "'Vraies ou fausses", 1, "Déterminer parmi les propositions suivantes lesquelles sont vraies :
+\begin{itemize}
+\item 136 est un multiple de 17 et 2 divise 167.
+\item 136 est un multiple de 17 ou 2 divise 167.
+\item $\exists x\in \mathbb R,\ (x+1=0\ \textrm{ et }x+2=0)$.
+\item $(\exists x\in\mathbb R,\ x+1=0)\textrm{ et }(\exists x\in\mathbb R,\ x+2=0)$.
+\item $\forall x\in\mathbb R,\ (x+1\neq 0\textrm{ ou }x+2\neq 0)$.
+\item $\exists x\in\mathbb R^*,\ \forall y\in\mathbb R^*,\ \forall z\in\mathbb R^*,\ z-xy=0$;
+\item $\forall y\in\mathbb R^*,\exists x\in\mathbb R^*,\ \forall z\in\mathbb R^*,\ z-xy=0$;
+\item $\forall y\in\mathbb R^*,\forall z\in\mathbb R^*,\ \exists x\in\mathbb R^*,\ z-xy=0$;
+\item $\exists a\in\mathbb R,\ \forall \veps&gt;0,\ |a|&lt;\veps$;
+\item $\forall \veps&gt;0,\ \exists a\in\mathbb R,\ |a|&lt;\veps$.
+\end{itemize}", "", "\begin{itemize}
+\item Cette propositions est fausse, car 2 ne divise pas 167.
+\item Cette proposition est vraie, car 136 est un multiple de 17.
+\item Cette proposition est fausse, car $x$ devrait être simultanément égal à -1 et à -2.
+\item Cette proposition est vraie car $(\exists x\in\mathbb R,\ x+1=0)$ est vraie (il suffit de prendre $x=-1$) et de la même façon $(\exists x\in\mathbb R,\ x+2=0)$ est vraie (il suffit de prendre $x=-2$).
+\item Cette proposition est vraie, par exemple car il s&#039;agit de la négation de la proposition 3, qui est fausse.
+\item Cette assertion est fausse. Si on considère $x$ n&#039;importe quel réel non nul, alors le choix de $y=1$ et de $z=2x$
+fait que $z$ est différent de $xy$.
+\item Cette assertion est fausse. Prenons n&#039;importe quel $y$ dans $\mathbb R^*$. 
+On voudrait trouver $x$ dans $\mathbb R^*$ tel que, pour tout $z$ dans $\mathbb R^*$, on ait $z=xy$. 
+Bien sûr, ce n&#039;est pas possible, car le $x$ que l&#039;on choisit devrait convenir à toute valeur de $z$,
+ce qui n&#039;est pas possible car il suffit de considérer un $z$ différent de $xy$.
+\item Cette assertion est vraie, car on peut choisir $x$ une fois $y$ et $z$ fixés. On choisit alors $x=z/y$.
+\item L&#039;assertion est vraie, il suffit de prendre $a=0$ (convient pour toute valeur de $\veps&gt;0$).
+\item Cette assertion est évidemment vraie car elle est plus faible que la précédente (on peut choisir
+$a$ après $\veps&gt;0$).
+\end{itemize}
+", "<div class=enonce><a class=lienexo href=javascript:showAll(&#039;innerenonce469&#039;,&#039;imageenonce469&#039;);>Enoncé <img id=imageenonce469 src=http://www.bibmath.net/ressources/lib/bas.png/></a><div class=inner id=innerenonce469>Déterminer parmi les propositions suivantes lesquelles sont vraies :
+<ol class=enumeratechiffre>
+<li> 136 est un multiple de 17 et 2 divise 167.
+</li><li> 136 est un multiple de 17 ou 2 divise 167.
+</li><li> $\exists x\in \mathbb R,\ (x+1=0\ \textrm{ et }x+2=0)$.
+</li><li> $(\exists x\in\mathbb R,\ x+1=0)\textrm{ et }(\exists x\in\mathbb R,\ x+2=0)$.
+</li><li> $\forall x\in\mathbb R,\ (x+1\neq 0\textrm{ ou }x+2\neq 0)$.
+</li><li> $\exists x\in\mathbb R^*,\ \forall y\in\mathbb R^*,\ \forall z\in\mathbb R^*,\ z-xy=0$;
+</li><li> $\forall y\in\mathbb R^*,\exists x\in\mathbb R^*,\ \forall z\in\mathbb R^*,\ z-xy=0$;
+</li><li> $\forall y\in\mathbb R^*,\forall z\in\mathbb R^*,\ \exists x\in\mathbb R^*,\ z-xy=0$;
+</li><li> $\exists a\in\mathbb R,\ \forall \veps&gt;0,\ |a|&lt;\veps$;
+</li><li> $\forall \veps&gt;0,\ \exists a\in\mathbb R,\ |a|&lt;\veps$.
+</li></ol></div></div>", "<div class=indication><a class=lienexo href=javascript:showAll(&#039;innerindication469&#039;,&#039;imageindication469&#039;);>Indication <img id=imageindication469 src=http://www.bibmath.net/ressources/lib/droite.png/></a><div class=inner id=innerindication469 style=display:none;></div></div>", "<div class=corrige><a class=lienexo href=javascript:showAll(&#039;innercorrige469&#039;,&#039;imagecorrige469&#039;);>Corrigé <img id=imagecorrige469 src=http://www.bibmath.net/ressources/lib/droite.png/></a><div class=inner id=innercorrige469 style=display:none;><ol class=enumeratechiffre>
+<li> Cette propositions est fausse, car 2 ne divise pas 167.
+</li><li> Cette proposition est vraie, car 136 est un multiple de 17.
+</li><li> Cette proposition est fausse, car $x$ devrait être simultanément égal à -1 et à -2.
+</li><li> Cette proposition est vraie car $(\exists x\in\mathbb R,\ x+1=0)$ est vraie (il suffit de prendre $x=-1$) et de la même façon $(\exists x\in\mathbb R,\ x+2=0)$ est vraie (il suffit de prendre $x=-2$).
+</li><li> Cette proposition est vraie, par exemple car il s&#039;agit de la négation de la proposition 3, qui est fausse.
+</li><li> Cette assertion est fausse. Si on considère $x$ n&#039;importe quel réel non nul, alors le choix de $y=1$ et de $z=2x$
+fait que $z$ est différent de $xy$.
+</li><li> Cette assertion est fausse. Prenons n&#039;importe quel $y$ dans $\mathbb R^*$. 
+On voudrait trouver $x$ dans $\mathbb R^*$ tel que, pour tout $z$ dans $\mathbb R^*$, on ait $z=xy$. 
+Bien sûr, ce n&#039;est pas possible, car le $x$ que l&#039;on choisit devrait convenir à toute valeur de $z$,
+ce qui n&#039;est pas possible car il suffit de considérer un $z$ différent de $xy$.
+</li><li> Cette assertion est vraie, car on peut choisir $x$ une fois $y$ et $z$ fixés. On choisit alors $x=z/y$.
+</li><li> L&#039;assertion est vraie, il suffit de prendre $a=0$ (convient pour toute valeur de $\veps&gt;0$).
+</li><li> Cette assertion est évidemment vraie car elle est plus faible que la précédente (on peut choisir
+$a$ après $\veps&gt;0$).
+</li></ol>
+</div></div>", "ZR7IQGQNWX", "J7Y0TG2K6T", "4CYHPXEI1B", 9)"
