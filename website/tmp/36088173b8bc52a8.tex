@@ -1,0 +1,158 @@
+% !TEX encoding = UTF-8 Unicode
+\documentclass[11pt, a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+
+\usepackage[top = 50mm, headheight=62pt]{geometry}
+\usepackage{titleps}
+\usepackage{tabularx, booktabs, multirow}
+\usepackage{graphicx, adjustbox, microtype}
+\usepackage{lipsum}
+
+\usepackage{amsmath}
+\usepackage[linesnumbered,ruled]{algorithm2e}
+\usepackage[noend]{algpseudocode}
+
+\makeatletter
+\def\BState{\State\hskip-\ALG@thistlm}
+\makeatother
+
+\usepackage{multicol}
+\usepackage{color}
+\usepackage{comment}
+
+\newcommand\doublePoint{::}
+
+\nonstopmode
+
+\usepackage[most]{tcolorbox}
+
+\newtcblisting[auto counter]{texCode}[2][]{
+     sharp corners,
+     keywordstyle=\color[rgb]{0,0,1},
+     fonttitle = \bfseries,
+     colframe = gray,
+     listing only,
+     listing options = {basicstyle = \ttfamily, language = TeX},
+     title = Code Source LaTeX - \thetcbcounter : #2, #1
+}
+
+\newtcblisting[auto counter]{bashCode}[2][]{
+     sharp corners,
+     keywordstyle=\color[rgb]{0,0,1},
+     fonttitle = \bfseries,
+     colframe = gray,
+     listing only,
+     listing options = {basicstyle = \ttfamily, language = Bash},
+     title = Code Source bash - \thetcbcounter : #2, #1
+}
+
+\newtcblisting[auto counter]{cppCode}[2][]{
+     keywordstyle=\color[rgb]{0,0,1},
+     sharp corners,
+     fonttitle = \bfseries,
+     colframe = gray,
+     listing only,
+     listing options = {basicstyle = \ttfamily, language = C++},
+     title = Code Source C++ - \thetcbcounter : #2, #1
+}
+
+\newtcblisting[auto counter]{pytCode}[2][]{
+     keywordstyle=\color[rgb]{0,0,1},
+     sharp corners,
+     fonttitle = \bfseries,
+     colframe = gray,
+     listing only,
+     listing options = {basicstyle = \ttfamily, language = Python},
+     title = Code Source Python - \thetcbcounter: #2, #1
+}
+
+\newtcblisting[auto counter]{javaCode}[2][]{
+     sharp corners,
+     keywordstyle=\color[rgb]{0,0,1},
+     fonttitle = \bfseries,
+     colframe = gray,
+     listing only,
+     listing options = {basicstyle = \ttfamily, language = Java},
+     title = Code Source Java - \thetcbcounter: #2, #1
+}
+
+\lstset{%
+     numbersep=3mm,
+		 numbers=left,
+		 numberstyle=\tiny,
+		 frame=single,
+		 framexleftmargin=6mm,
+		 xleftmargin=6mm,
+		 literate=%
+		  	{doublePoint}{::}2 %
+				{code}{CODE}4 %
+				{end}{END}3 %
+				{endl}{endl}4 %
+				{image}{IMAGE}5 %
+				{chapter}{CHAPTER}7 %
+				% {sub}{SUB_SECTION}9 %
+				% {subsub}{SUB_SUB_SECTION}14 %
+}
+
+\setlength{\columnseprule}{1pt}
+\setlength{\columnsep}{0.5cm}
+\def\columnseprulecolor{\color{black}}
+
+\makeatletter
+     \renewcommand{\thesection}{\Roman{section}.}
+     \renewcommand{\thesubsection}{\Roman{section}.\arabic{subsection}.}
+     \renewcommand{\thesubsubsection}{\Roman{section}.\arabic{subsection}.\alph{subsubsection}}
+\makeatother
+
+\makeatletter
+     \renewcommand{\section}{\@startsection{section}{1}{\z@}%
+          {-3.5ex \@plus -1ex \@minus -.2ex}%
+          {2.3ex \@plus .2ex}%
+          {\reset@font\Large\bfseries	}}
+     \renewcommand{\subsection}{\@startsection{subsection}{1}{\z@}%
+          {-3.5ex \@plus -1ex \@minus -.2ex}%
+          {2.3ex \@plus .2ex}%
+          {\reset@font\large\bfseries}}
+     \renewcommand{\subsubsection}{\@startsection{subsubsection}{1}{\z@}%
+          {-3.5ex \@plus -1ex \@minus -.2ex}%
+          {2.3ex \@plus .2ex}%
+          {\reset@font\large\bfseries}}
+\makeatother
+
+\usepackage{lastpage}
+
+\newpagestyle{style}{
+\sethead{}{%
+     \begin{tabularx}{\linewidth}[b]{@{}l>{\raggedleft\arraybackslash}X@{}}
+          \smash{\raisebox{-0.7\height}{}}& \today \\
+          & \huge \bfseries Khôlles \\
+          & kholles generator by planchon.io \\ 
+          \addlinespace
+          \midrule[0.4pt]
+     \end{tabularx}}{}
+\setfoot{}{\thepage}{}
+}
+
+\usepackage{tocstyle}
+\usepackage[nottoc, notlof, notlot]{tocbibind}
+
+\usetocstyle{standard}
+\usepackage{mathtools}
+\usepackage{amssymb}
+
+\usepackage[french]{babel}
+
+\pagestyle{style}
+
+\begin{document}
+\section{Exercices}\subsection{Degré de la dérivée}Soit $F\in\mathbb K(X)$. Montrer que si $\deg(F')&lt;\deg(F)-1$, alors $\deg(F)=0$.\newpage\section{Indicators}\section{Degré de la dérivée}Écrire $F=A/B$ et calculer le degré de $F'$ en fonctions des degrés respectifs de $A$ et $B$.\newpage\section{Corriges}\section{Degré de la dérivée}On écrit $F=A/B$, avec $\deg(F)=\deg(A)-\deg(B)$. On a $F'=(A'B-AB')/B^2$,
+et donc $\deg(F')=\deg(A'B-AB')-2\deg(B)$. Or, $\deg(A'B)=\deg(AB')=\deg(A)+\deg(B)-1$.
+Si $\deg(A'B-AB')=\deg(A)+\deg(B)-1$, on aurait $\deg(F')=\deg(F)-1$, ce qui n'est pas le cas.
+On a donc $\deg(A'B-AB')&lt;\deg(A'B)=\deg(AB')$. Mais si $A=a_k X^k+\dots$ et $B=b_nX^n+\dots,$
+alors $A'B=ka_kb_nX^{k+n-1}+\dots$ et $AB'=na_kb_nX^{k+n-1}+\dots$. Pour que $\deg(A'B-AB')$ soit inférieur
+strict à $n+k-1$, il est donc nécessaire que $k=n$, c'est-à-dire que $A$ et $B$ aient le même degré.
+Ceci signifie exactement $\deg(F)=0$.
+\end{document}

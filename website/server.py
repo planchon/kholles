@@ -66,6 +66,10 @@ def send_exo(id):
 
 	print(exo_to_render)
 
+@app.route('/delete_exo/<id>', methods=['POST'])
+def delete_exo(id):
+	exo_to_render.remove(id)
+
 @app.route('/liste')
 def ma_liste():
 	conn = sqlite3.connect("../data")
